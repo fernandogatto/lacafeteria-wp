@@ -17,7 +17,7 @@
 				<h4>Contato</h4>
 			</div>
 			<div class="description">
-				<form>
+				<form action="<?php echo get_template_directory_uri(); ?>/enviar.php" method="post">
 					<div class="group-item">
 						<label for="name">Nome</label>
 						<input type="text" id="name" name="name">
@@ -27,14 +27,14 @@
 						<input type="email" id="email" name="email">
 					</div>
 					<div class="group-item">
-						<label for="telefone">Telefone</label>
-						<input type="text" id="telefone" name="telefone">
+						<label for="phone">Telefone</label>
+						<input type="text" id="phone" name="phone">
 					</div>
 					<div class="group-item">
-						<label for="mensagem">Mensagem</label>
-						<textarea type="text" id="mensagem" name="mensagem"></textarea>
+						<label for="message">Mensagem</label>
+						<textarea type="text" id="message" name="message"></textarea>
 					</div>
-					<button type="button" class="btn">Enviar</button>
+					<button type="submit" class="btn">Enviar</button>
 				</form>
 				<div class="how-to-meet">
 					<h3>Onde nos encontrar</h3>
