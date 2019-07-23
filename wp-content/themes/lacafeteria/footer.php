@@ -1,10 +1,14 @@
-  <footer>
+<?php
+$sobre = get_page_by_title('Sobre');
+$contato = get_page_by_title('Contato');
+?>
+	<footer>
 		<div class="footer">
 			<div class="container">
 				<div class="content">
 					<div class="about footer-item">
 						<h4>Sobre</h4>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum deleniti rem vero modi provident vel consequuntur quia reiciendis accusantium quasi aut alias.</p>
+						<p><?php the_field('resumo_texto_sobre_a_cafeteria', $sobre); ?></p>
 					</div>
 					<div class="pages footer-item">
 						<h4>Páginas</h4>
@@ -15,12 +19,12 @@
 					</div>
 					<div class="contact footer-item">
 						<h4>Contato</h4>
-						<p>2130 Fulton St, San Francisco, CA 94117, EUA</p>
-						<p>contato@email.com</p>
-						<p>+55 021 2412-3333</p>
+						<p><?php the_field('endereco', $contato); ?></p>
+						<p><?php the_field('email', $contato); ?></p>
+						<p><?php the_field('telefone', $contato); ?></p>
 						<div class="social">
-							<a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a>
-							<a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+							<a href="<?php the_field('link_do_facebook', $contato); ?>" target="_blank"><i class="fab fa-facebook-square"></i></a>
+							<a href="<?php the_field('link_do_instagram', $contato); ?>" target="_blank"><i class="fab fa-instagram"></i></a>
 						</div>
 					</div>
 				</div>
@@ -32,7 +36,6 @@
 	</footer>
 	<?php wp_footer(); ?>
 </body>
-<!-- <script src="assets/js/jquery-3.4.1.js"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 <script>new WOW().init();</script>
 </html>

@@ -38,14 +38,14 @@
 				</form>
 				<div class="how-to-meet">
 					<h3>Onde nos encontrar</h3>
-					<p>2130 Fulton St, San Francisco, CA 94117, EUA</p>
+					<p><?php the_field('endereco'); ?></p>
 					<h3 style="margin-top: 20px;">Entre em contato</h3>
-					<p>contato@email.com</p>
-					<p>+55 021 2412-3333</p>
+					<p><?php the_field('email'); ?></p>
+					<p><?php the_field('telefone'); ?></p>
 					<h3 style="margin-top: 20px;">Social</h3>
 					<div class="social">
-						<a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a>
-						<a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+						<a href="<?php the_field('link_do_facebook'); ?>" target="_blank"><i class="fab fa-facebook-square"></i></a>
+						<a href="<?php the_field('link_do_instagram'); ?>" target="_blank"><i class="fab fa-instagram"></i></a>
 					</div>
 				</div>
 			</div>
